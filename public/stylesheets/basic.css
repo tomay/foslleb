@@ -57,7 +57,7 @@ h2 {
 #header {
 	position: relative;
 	width: 100%;
-	background: url("images/bellsof.jpg") no-repeat;
+	background: url("http://www.bellsof.com/images/bellsof.jpg") no-repeat;
 	height: 10em;
 	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
 }
