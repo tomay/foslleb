@@ -1,5 +1,5 @@
 <div id="footer">
-  <p>Design and some content &copy; 2007-2011 chorographics | Poetry, lyrics, stories &copy; 2007-2011 Lawrence McDonald, BELLS OF.. |
+  <p>Design &copy; 2007-<%=Time.now.year%>  chorographics | Poetry, lyrics, stories &copy; 2007-<%=Time.now.year%> Lawrence McDonald, BELLS OF.. |
 <% if signed_in? %>
     <%= link_to "Sign out", logout_path, :method => :delete %>
     <% else %>
