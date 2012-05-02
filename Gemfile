@@ -6,6 +6,8 @@ gem 'rails', '3.0.7'
 #gem 'bcrypt-ruby', '2.1.4'
 #gem 'devise', '1.3.3'
 
+gem 'jquery-rails', '>= 1.0.12'
+
 group :development, :test do
   gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 end

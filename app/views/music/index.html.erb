@@ -2,9 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>Bells Of..</title>
-  <%= stylesheet_link_tag "basic", "galleria" %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "basic", "galleria", "jplayer.css" %>
+  <%= javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+  <%= javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" %>
+  <%= javascript_include_tag "jplayer_min.js" %>
   <%= csrf_meta_tag %>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+          });
+        },
+        swfPath: "/js",
+        supplied: "m4a, oga"
+      });
+    });
+  </script>
+
 </head>
 <body>
 
@@ -24,13 +42,47 @@
       <a href="http://www.myspace.com/bellsoflarrymac">Myspace site #2</a> ||
       <a href="http://www.myspace.com/bellsoflawrencemcdonald">Myspace site #3</a></p>
       <br>
-      <object type="application/x-shockwave-flash" width="400" height="170"
-              data="http://www.bellsof.com/musak/xspf_player.swf?playlist_url=http://www.bellsof.com/musak/bells.xspf">
-              <param name="movie"
-              value="http://www.bellsof.com/musak/xspf_player.swf?playlist_url=http://www.bellsof.com/musak/bells.xspf" />
-      </object>
-      <p>To download songs right-click track and select "Download this song"</p>
-      <p>Or use these direct links:<br>
+  <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+  <div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
+      <div class="jp-gui jp-interface">
+        <ul class="jp-controls">
+          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+        </ul>
+        <div class="jp-progress">
+          <div class="jp-seek-bar">
+            <div class="jp-play-bar"></div>
+          </div>
+        </div>
+        <div class="jp-volume-bar">
+          <div class="jp-volume-bar-value"></div>
+        </div>
+        <div class="jp-time-holder">
+          <div class="jp-current-time"></div>
+          <div class="jp-duration"></div>
+          <ul class="jp-toggles">
+            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="jp-title">
+        <ul>
+          <li>Bubble</li>
+        </ul>
+      </div>
+      <div class="jp-no-solution">
+        <span>Update Required</span>
+        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+      </div>
+    </div>
+  </div>
+      <p>Use these links to download songs:</p>
       <b>Songs from Young McDonald and the 5 Season Farmers (2010):</b><br>
       <a href="https://bellsofmusak.s3.amazonaws.com/01%20Wallenda.mp3">Wallenda</a> || <a href="https://bellsofmusak.s3.amazonaws.com/02%20Deceptive%20Paradise.mp3">Deceptive Paradise</a> || <a href="https://bellsofmusak.s3.amazonaws.com/03%20Chess.mp3">Chess</a> || <a href="https://bellsofmusak.s3.amazonaws.com/04%20Ephemeral.mp3">Ephemeral</a> || <a href="https://bellsofmusak.s3.amazonaws.com/05%20Long%20Daze.mp3">Long Daze</a> || <a href="https://bellsofmusak.s3.amazonaws.com/06%20Resolve.mp3">Resolve</a> || <a href="https://bellsofmusak.s3.amazonaws.com/07%20Tony%20Thai-Man%20in%20Memoriam.mp3">Tony Thai-Man in Memoriam</a> || <a href="https://bellsofmusak.s3.amazonaws.com/08%20The%20Ghost%20of%20Susan%20Ward.mp3">Susan Ward</a> || <a href="https://bellsofmusak.s3.amazonaws.com/09%20One%20Shot.mp3">One Shot</a> || <a href="https://bellsofmusak.s3.amazonaws.com/10%20Lost.mp3">Lost</a></p>
 
