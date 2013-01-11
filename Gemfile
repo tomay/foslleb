@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.2.11'
 #gem 'warden', '1.0.3'
 #gem 'orm_adapter', '0.0.4'
 #gem 'bcrypt-ruby', '2.1.4'
