@@ -9,3 +9,5 @@ group :development, :test do
   #gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
   gem 'sqlite3'
 end
+
+gem 'rails_12factor', group: :production
