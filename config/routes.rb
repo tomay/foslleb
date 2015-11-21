@@ -25,6 +25,8 @@ Bellsof::Application.routes.draw do
   #resources :photos
   get "home/index"
 
+  match 'index2', :to => 'home#index2'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
