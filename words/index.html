@@ -16,7 +16,7 @@
 $(document).ready(function(){
 
 
-  $.get('./words_seed.txt', function(response) {
+  $.get('words/words_seed.txt', function(response) {
     var rawstories = response.split('==');
     var target = $('div#leftcol2');
     var titles = [];
