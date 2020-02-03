@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<meta charset="utf-8" /> 
+<head>
+    <title>Bells of..</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="imagetoolbar" content="false">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<link href="../css/basic.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../css/galleria.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<script src="../javascript/jquery.min.js" type="text/javascript"></script>
+	<script src="../javascript/jquery.galleria.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+	$(document).ready(function(){
+
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+
+				// fade in the image & caption
+				image.css('display','none').fadeIn(1000);
+				caption.css('display','none').fadeIn(1000);
+
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+
+
+	</script>
+    <style media="screen,projection" type="text/css">
+
+	/* BEGIN DEMO STYLE */
+	*{margin:0;padding:0}
+
+	.caption{color:#888;position:absolute;top:330px;left:603px;width:200px;}
+	.demo{position:relative;margin-top:2em;}
+	.gallery_demo{width:200px;float:left;}
+	.gallery_demo li{width:55px;height:70px;border:3px double #eee;margin: 0 2px 2px 0;background:#eee;}
+	.gallery_demo li.hover{border-style:solid;border-color:#222222;}
+	.gallery_demo li.active{border-style:solid;border-color:#222;}
+	.gallery_demo li div{left:240px}
+	.gallery_demo li div .caption{font:italic 0.7em/1.4 georgia,serif;}
+
+	.galleria_container{margin:0 auto 60px auto;height:438px;width:600px;float:left;}
+
+	.nav{padding-top:15px;clear:both;}
+
+	.info{text-align:left;margin:30px 0;border-top:1px dotted #221;padding-top:30px;clear:both;}
+	.info p{margin-top:1.6em;}
+
+	.nav{position:absolute;top:410px;left:0;}
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="header">
+<ul id="primary">
+  <li><a href="../">Home</a></li>
+  <li><a href="../music/">Music</a></li>
+  <li><a href="../words/">Words</a></li>
+  <li><span>Photos</span></li>
+</ul>
+</div>
+<div id="main" style="padding-top:.35em;">
+  <div id="contents" style="height:535px">
+    <div id="photolink">
+            page 01 | <a href="photos2.html">02</a> | <a href="photos3.html">03</a> | <a href="photos4.html">04</a> | <a href="photos5.html">05</a> | <a href="photos6.html">06</a> | <a href="photos7.html">07</a> | <a href="photos8.html">08</a>
+    </div>
+
+    <div class="demo">
+      <ul class="gallery_demo_unstyled">
+        <li><img alt="Bells Pool" src="https://bellspics.s3.amazonaws.com/bells_pool.jpg" title="Bells Pool" /></li>
+        <li><img alt="Bus and Field" src="https://bellspics.s3.amazonaws.com/busandfield0.jpg" title="Bus and Field" /></li>
+        <li><img alt="Corner Air" src="https://bellspics.s3.amazonaws.com/corner_air_oc.jpg" title="Corner Air" /></li>
+        <li><img alt="Adj" src="https://bellspics.s3.amazonaws.com/adj0.jpg" title="Adj" /></li>
+        <li><img alt="Arlington" src="https://bellspics.s3.amazonaws.com/arlington.jpg" title="Arlington" /></li>
+        <li><img alt="Bass" src="https://bellspics.s3.amazonaws.com/bass_0.jpg" title="Bass" /></li>
+        <li><img alt="Andycane" src="https://bellspics.s3.amazonaws.com/andy0.jpg" title="Andycane" /></li>
+        <li><img alt="Bells 1985" src="https://bellspics.s3.amazonaws.com/bells1985_0.jpg" title="Bells 1985" /></li>
+        <li><img alt="Bells 1986" src="https://bellspics.s3.amazonaws.com/bells1986_0.jpg" title="Bells 1986" /></li>
+        <li><img alt="Melons" src="https://bellspics.s3.amazonaws.com/melons0.jpg" title="Melons" /></li>
+        <li><img alt="Recording 2004" src="https://bellspics.s3.amazonaws.com/recording2004.jpg" title="Recording 2004" /></li>
+        <li><img alt="Nate CCCC" src="https://bellspics.s3.amazonaws.com/nate_cccc2.jpg" title="Nate CCCC" /></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <p>Design © 2007-<span class="copy-year">2020</span> chorographics | Poetry, lyrics, stories © 2007-<span class="copy-year">2020</span> Lawrence McDonald, BELLS OF.. </p>
+</div>
+
+
+<script src="https://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-1848000-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
