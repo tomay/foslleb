@@ -1,0 +1,207 @@
+html { min-width: 600px; }
+
+body, div, td, th, h2, h3, h4 { /* redundant rules for bad browsers  */  
+	font-size: 9pt;
+	font-family: Helvetica, Arial, SunSans-Regular, sans-serif;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	/*font-size: small;*/
+	color: #333;
+}  
+.clearhack { display: inline; } /*Clears Box Model Hack in IE5*/
+
+body {
+	background: white;
+	padding: 0em 20px 3em 20px;
+	margin: 0;
+}
+
+a { 
+	color: #06C; 
+	text-decoration:none; 
+}
+
+a:hover { 
+	color: #333; 
+	text-decoration:none; 
+}
+
+a:active { 
+	color: #000; 
+	text-decoration:none; 
+}
+
+/*p { line-height: 14pt; } */
+
+h1,h2 {
+	/*font-family: trebuchet ms;*/
+	font-weight: bold;
+	color: #333;
+}
+
+h1 {
+	font-size: 13pt;
+	margin: 0;
+}
+
+h1 a { text-decoration: none; color: #333; }
+h1 a:hover { text-decoration: none; border-bottom: 1px dotted #666; color: #000; }
+
+h2 {
+	font-size: 13pt;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #CCC;
+	margin: 0;
+}
+
+#header {
+	position: relative;
+	width: 100%;
+	background: url("../images/bellsof.jpg") no-repeat;
+	height: 10em;
+	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+}
+
+#header ul#primary {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -1px;
+	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+}
+
+#header ul#primary li  {
+	display: inline;
+	list-style: none;
+}
+
+#header ul#primary a,#header ul#primary span,#header ul#primary a.current {
+	width: 8em;
+	display: block;
+	float: left;
+	padding: 4px 0;
+	margin: 1px 2px 0 0;
+	text-align: center;
+	font-family: tahoma, verdana, sans-serif;
+	font-size: 8pt;
+	text-decoration: none;
+	color: #333;
+}
+
+#header ul#primary span,#header ul#primary a.current,#header ul#primary a.current:hover {
+	border: 1px solid #666;
+	border-bottom: none;
+	background: white;
+	padding-bottom: 6px;
+	margin-top: 0;
+}
+
+#header ul#primary a {
+	background: #F5F5DC;
+	border: 1px solid #AAA;
+	border-bottom: none;
+}
+
+#header ul#primary a:hover {
+	margin-top: 0;
+	border-color: #666;
+	background white;
+	padding-bottom: 5px;
+}
+
+#container {
+	position: relative;
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 553px;
+	height: 260px;
+}
+
+#main {
+	border: 1px solid #666;
+	clear: both;
+	background white;
+	padding-top: 2em;
+}
+
+#contents {
+	padding: 1.5em;
+	background white;
+	min-height: 300px;
+}
+
+#leftcol a {
+	text-decoration:none;
+}
+
+#leftcol a:hover { 
+	color: #333; 
+	text-decoration:none; 
+}
+
+#contents {
+	font-size:9pt;
+}
+
+#contents a {
+	text-decoration:none;
+}
+
+#contents a:hover { 
+	color: #333; 
+	text-decoration:none; 
+}
+
+#contents2 {
+	padding: 1em;
+	text-align:right;
+}
+
+#contents2 a {
+	text-decoration:none;
+}
+
+#contents2 a:hover { 
+	color: #333; 
+	text-decoration:none; 
+}
+
+#leftcol {
+	padding: 1.5em;
+	padding-right:3em;
+	background white;
+	min-height: 300px;
+	width: 170px;
+	float:left;
+	font-size:9pt;
+ 	}
+
+#leftcol2 {
+	padding: 1.5em;
+	padding-right:3em;
+	background white;
+	width:500px;
+	font-size:9pt;
+ 	}
+
+#rightcol {
+	margin-left: 360px;
+	width: 440px;
+	padding-left: 2.5em;
+	padding-top: 1em;
+	font-size:9pt;
+	}
+
+#footer {
+	margin: 50px
+	padding:0 3em; 
+	font-size:75%; 
+	color:Grey; 
+	text-align:center;
+}
+
+#flashcontent {
+	width: 480px;
+	height: 680px;
+}
